@@ -15,7 +15,7 @@
         "src/PerformanceAnalyzer.cpp",
         "main.cpp",
         "-o",
-        "tsp_solver.exe"
+        "${config:exeName}"
       ],
       "group": {
         "kind": "build",
@@ -26,6 +26,48 @@
         "echo": true,
         "reveal": "always",
         "panel": "shared"
+      },
+      "windows": {
+        "args": [
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "src/Graph.cpp",
+          "src/TSPSolver.cpp", 
+          "src/PerformanceAnalyzer.cpp",
+          "main.cpp",
+          "-o",
+          "tsp_solver.exe"
+        ]
+      },
+      "linux": {
+        "args": [
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "src/Graph.cpp",
+          "src/TSPSolver.cpp", 
+          "src/PerformanceAnalyzer.cpp",
+          "main.cpp",
+          "-o",
+          "tsp_solver"
+        ]
+      },
+      "osx": {
+        "args": [
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-O2",
+          "src/Graph.cpp",
+          "src/TSPSolver.cpp", 
+          "src/PerformanceAnalyzer.cpp",
+          "main.cpp",
+          "-o",
+          "tsp_solver"
+        ]
       }
     },
     {
@@ -57,6 +99,15 @@
         "echo": true,
         "reveal": "always",
         "panel": "shared"
+      },
+      "windows": {
+        "command": ".\\tsp_solver.exe"
+      },
+      "linux": {
+        "command": "./tsp_solver"
+      },
+      "osx": {
+        "command": "./tsp_solver"
       }
     },
     {

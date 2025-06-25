@@ -3,7 +3,19 @@ CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -O2
 SRCDIR = src
 SOURCES = $(SRCDIR)/Graph.cpp $(SRCDIR)/TSPSolver.cpp $(SRCDIR)/PerformanceAnalyzer.cpp main.cpp
-TARGET = tsp_solver.exe
+TARGET = tsp_solver
+
+# Detecta o sistema operacional
+ifeq ($(OS),Windows_NT)
+    TARGET := $(TARGET).exe
+    RM = del /Q
+    RM_DIR = rd /S /Q
+    RUN_PREFIX = 
+else
+    RM = rm -f
+    RM_DIR = rm -rf
+    RUN_PREFIX = ./
+endif
 
 # Regra principal
 all: $(TARGET)
@@ -17,10 +29,10 @@ debug: $(TARGET)
 
 # Limpeza
 clean:
-	del /Q $(TARGET) 2>nul || exit 0
+	$(RM) $(TARGET) 
 
 # Execução
 run: $(TARGET)
-	./$(TARGET)
+	$(RUN_PREFIX)$(TARGET)
 
 .PHONY: all debug clean run

@@ -1,0 +1,27 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Declare files that will always have specific line endings
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# C++ source files
+*.cpp text
+*.h text
+*.hpp text
+
+# VS Code specific
+*.json text
+
+# Documents
+*.md text
+*.html text
+*.csv text
+
+# Denote all files that are truly binary and should not be modified
+*.exe binary
+*.o binary
+*.obj binary
+*.dll binary
+*.so binary
+*.dylib binary

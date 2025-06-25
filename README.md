@@ -94,15 +94,51 @@ g++ -std=c++17 -O2 src/Graph.cpp src/TSPSolver.cpp src/PerformanceAnalyzer.cpp m
 ./tsp_solver.exe
 ```
 
-### 🖥️ Método Alternativo
-```bash
-# Usando Makefile
-make all
-./tsp_solver.exe
+## � Quick Start
 
-# Para apresentação
-./apresentar.bat  # Windows
+### Windows
+
+```powershell
+# Clone o repositório
+git clone https://github.com/janjo1413/trabalhofinalgrafos.git
+cd trabalhofinalgrafos
+
+# Método 1: Usando o script de apresentação
+apresentar.bat
+
+# Método 2: Compilar e executar manualmente
+g++ -std=c++17 -O2 src/Graph.cpp src/TSPSolver.cpp src/PerformanceAnalyzer.cpp main.cpp -o tsp_solver.exe
+.\tsp_solver.exe
+
+# Método 3: Usando Makefile
+make all
+.\tsp_solver.exe
 ```
+
+### Linux/macOS
+
+```bash
+# Clone o repositório
+git clone https://github.com/janjo1413/trabalhofinalgrafos.git
+cd trabalhofinalgrafos
+
+# Método 1: Usando o script de apresentação
+chmod +x apresentar.sh
+./apresentar.sh
+
+# Método 2: Compilar e executar manualmente
+g++ -std=c++17 -O2 src/Graph.cpp src/TSPSolver.cpp src/PerformanceAnalyzer.cpp main.cpp -o tsp_solver
+./tsp_solver
+
+# Método 3: Usando Makefile
+make all
+./tsp_solver
+```
+
+### Requisitos
+- Compilador compatível com C++17 (GCC 7+, Clang 5+, MSVC 2017+)
+- 2GB de RAM (para instâncias grandes)
+- Make (opcional, para usar o Makefile)
 
 ## 📊 Demo dos Resultados
 

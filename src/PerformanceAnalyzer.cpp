@@ -117,7 +117,7 @@ void PerformanceAnalyzer::salvarResultadosEmArquivo(
 }
 
 void PerformanceAnalyzer::imprimirResultados(const std::vector<PerformanceResult>& results) {
-    printHeader();
+    imprimirCabecalho();
     
     for (const auto& result : results) {
         std::cout << std::setw(20) << result.algorithm
@@ -129,7 +129,7 @@ void PerformanceAnalyzer::imprimirResultados(const std::vector<PerformanceResult
                   << std::endl;
     }
     
-    printSeparator();
+    imprimirSeparador();
 }
 
 void PerformanceAnalyzer::gerarRelatorioComparativo(const std::vector<PerformanceResult>& results) {
@@ -185,7 +185,7 @@ double PerformanceAnalyzer::calcularDesvioPadrao(const std::vector<double>& valo
 
 void PerformanceAnalyzer::imprimirCabecalho() {
     std::cout << "\n=== RESULTADOS DA ANALISE DE DESEMPENHO ===" << std::endl;
-    printSeparator();
+    imprimirSeparador();
     std::cout << std::setw(20) << "Algoritmo"
               << std::setw(8) << "Tamanho"
               << std::setw(12) << "Tempo(ms)"
@@ -193,7 +193,7 @@ void PerformanceAnalyzer::imprimirCabecalho() {
               << std::setw(12) << "Desv.Tempo"
               << std::setw(15) << "Desv.Dist"
               << std::endl;
-    printSeparator();
+    imprimirSeparador();
 }
 
 void PerformanceAnalyzer::imprimirSeparador() {
