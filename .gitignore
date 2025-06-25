@@ -1,0 +1,29 @@
+# Executáveis
+*.exe
+*.out
+*.app
+
+# Arquivos de compilação
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+
+# Arquivos temporários
+*.tmp
+*.temp
+*~
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# IDE/Editor
+.vscode/settings.json
+.vscode/launch.json
+*.swp
+*.swo
+
+# Resultados podem ser incluídos como exemplo
+# resultados_tsp.csv
