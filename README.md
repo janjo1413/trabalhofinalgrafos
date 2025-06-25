@@ -28,16 +28,59 @@ Implementação de heurísticas para o **Traveling Salesman Problem (TSP) Simét
 
 ```
 projeto/
-├── main.cpp                       # Menu interativo
-├── src/
-│   ├── Graph.h/cpp               # Representação do grafo
-│   ├── TSPSolver.h/cpp           # Implementação das heurísticas
-│   └── PerformanceAnalyzer.h/cpp # Análise estatística e CSV
-├── resultados_tsp.csv            # Arquivo de saída
+├── main.cpp                       # Ponto de entrada do programa
+├── src/                          # Código fonte organizado
+│   ├── Graph.h/cpp               # Classe do grafo
+│   ├── TSPSolver.h/cpp           # Algoritmos TSP
+│   └── PerformanceAnalyzer.h/cpp # Análise e métricas
+├── .vscode/                      # Configurações VS Code
+├── resultados_tsp.csv            # Dados experimentais
 ├── apresentacao.html             # Documentação visual
-├── apresentar.bat               # Script de apresentação
+├── apresentar.bat               # Script Windows
+├── Makefile                     # Build system
+├── .gitignore                   # Arquivos ignorados
+├── LICENSE                      # Licença MIT
 └── README.md                    # Este arquivo
 ```
+
+### 📄 Descrição Detalhada dos Arquivos
+
+#### 🚀 **Arquivos Principais**
+- **`main.cpp`**: Ponto de entrada do programa com menu interativo em português. Permite escolher entre demonstração, teste rápido ou análise completa. Centraliza toda a interface do usuário.
+
+#### 🧩 **Código Fonte (`src/`)**
+- **`Graph.h/cpp`**: Implementa a representação do grafo completo simétrico. Contém matriz de adjacência, geração de pesos aleatórios e funções auxiliares para manipulação do grafo.
+
+- **`TSPSolver.h/cpp`**: Coração do projeto - implementa todas as heurísticas TSP:
+  - Vizinho Mais Próximo (construção gulosa)
+  - Inserção Mais Barata (construção por inserção)
+  - 2-opt (busca local para otimização)
+  - Combinações das heurísticas para melhor qualidade
+
+- **`PerformanceAnalyzer.h/cpp`**: Responsável pela análise experimental:
+  - Execução de múltiplas instâncias
+  - Medição precisa de tempo (microsegundos)
+  - Cálculo de estatísticas (média, desvio padrão)
+  - Exportação para CSV
+
+#### 🔧 **Configuração e Build**
+- **`Makefile`**: Sistema de build multiplataforma. Facilita compilação com flags otimizadas (-O2) e limpeza de arquivos temporários.
+
+- **`.vscode/tasks.json`**: Tarefas pré-configuradas para VS Code (compilação otimizada, debug, execução). Melhora produtividade no desenvolvimento.
+
+- **`.gitignore`**: Define arquivos que não devem ser versionados (executáveis .exe, objetos .o, temporários). Mantém repositório limpo.
+
+#### 📊 **Resultados e Documentação**
+- **`resultados_tsp.csv`**: Arquivo de saída com dados experimentais. Contém tempos, custos e estatísticas de todas as execuções para análise posterior.
+
+- **`apresentacao.html`**: Documentação visual completa do projeto. Explica algoritmos, mostra resultados e serve como material de apresentação.
+
+- **`apresentar.bat`**: Script Windows para facilitar apresentação. Abre automaticamente o HTML e executa o programa.
+
+#### 📜 **Licenciamento**
+- **`LICENSE`**: Licença MIT para uso acadêmico e comercial. Permite distribuição e modificação do código.
+
+- **`README.md`**: Este arquivo - documentação principal do projeto com instruções de uso, exemplos e informações acadêmicas.
 
 ## 🚀 Quick Start
 
