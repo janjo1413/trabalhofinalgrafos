@@ -124,28 +124,6 @@
       "command": "make",
       "args": ["clean"],
       "group": "build"
-    },
-    {
-      "label": "Compilar C++ (Legacy)",
-      "type": "shell",
-      "command": "g++",
-      "args": [
-        "cpp.cpp",
-        "-o",
-        "cpp.exe"
-      ],
-      "group": "build",
-      "problemMatcher": []
-    },
-    {
-      "label": "Executar C++ (Legacy)",
-      "type": "shell",
-      "command": ".\\cpp.exe",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "panel": "shared"
-      }
     }
   ]
 }
